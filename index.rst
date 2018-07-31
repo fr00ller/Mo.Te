@@ -4,7 +4,7 @@ Health Bredings Managment
 Tipologia Utenti
 ============
 
-    **SUPER USER**
+    **AMMINISTRATORE**
     
     - L’utente super user ha la possibilità di visualizzare tutti i dati statistici relativi ad ogni allevamento.
     
@@ -115,4 +115,100 @@ Dashboard
     Per ogni singolo allevamento o unità di produttiva sarà possibile lasciare dei commenti o annotazioni.
     Essi vengono eliminati dopo 03 mesi dall’inserimento.
    
+    ================
+    UNITÀ PRODUTTIVE
+    ================
+    Anche questa maschera sarà ad uso esclusivo dell’utente super user e permette di creare o modificare unità produttive. Per unità produttiva è inteso un sottoinsieme all’interno di un allevamento identificato dai seguenti campi:
+    
+    - Nome.
+    - Indirizzo.
+    - Comune.
+    - Provincia.
+    - Cap.
+    - Email.
+    - Telefono.
+    - Allevamento. ( indica a quale allevamento appartiene l’unità produttiva)
+    - Tipo allevamento. (Ingrasso,Parto,etc…)
+    - Tipologia Animali.
+    
+    In fase di creazione di ogni unità produttiva sarà possibile creare nuovi sottoinsiemi che da adesso in poi chiameremo box. Essi sono esattamente corrispondenti allo spazio fisico dove vengono tenuti i capi e hanno i seguenti campi:
+    
+    - Nome box.
+    - Larghezza.
+    - Lunghezza.
+    - Numero Capi.
+    
+    I box devono essere associati ad una ed una sola unità produttiva e vengono utilizzati per individuare più velocemente dove sono collocati fisicamente i capi all’interno dell’allevamento.
+    
+    ==================
+    ANAGRAFICA CAPI
+    ==================
+    
+    Questa è sicuramente una delle parti centrali del programma in quanto andiamo a definire le informazioni di base di ogni singolo capo. Essa può essere inserita e modificata da tutti gli utenti in base al livello di accesso come descritto sopra. Nel dettaglio i campi previsti per ogni capo sono:
+    Codice identificativo.
+    Unità produttiva.
+    Peso alla nascita.
+    Data di nascita.
+    Codice padre.
+    Codice madre.
+    Razza.
+    Stato.
+    Descrizione.
+    Per ogni box l’operatore ha la possibilità di inserire il peso generale in modo che possa poi essere visualizzata  la curva di crescita agli utenti abilitati.
+    Oltre a questo sarà possibile sempre visualizzare la scheda completa del capo e più nel dettaglio sono disponibili le seguenti informazioni:
+    Grafico temperature.
+    Grafico somministrazioni.
+    Cronologia Somministrazioni.
+    Per facilitare l’inserimento di queste informazioni all’operatore sono previsti dei filtri nella lista dei capi che permettono di individuare velocemente l’animale su cui operare.I filtri a disposizione sono:
+    Ricerca per codice identificativo.
+    Unità produttiva.
+    Range di date.
+    Temperatura. 
+    
+    ===========
+    ATTIVITÀ  
+    ===========
+    Sono lo strumento che viene usato dal veterinario per poter assegnare compiti ad uno specifico allevamento o unità produttiva. Più nello specifico potrà essere creata una nuova attività indicando in modo generale per tutti:
+    Capi interessati.
+    Tipo attività (Somministrazione, Richiesta Generica).
+    Priorità.
+    Descrizione.
+    Nel caso specifico della somministrazione sarà possibile specificare:
+    Nome del farmaco.
+    Dose.
+    Ripetizione.
+    Intervallo di tempo.
+    Esse saranno elencate a gli operatori interessati in base alla priorità indicata in fase di inserimento.
+    Sarà possibile filtrare le attività per rendere più agevole la ricerca all’operatore.
+    I filtri possibili per le attività sono:
+    Tipo di attività.
+    Range di date
+    
+    
+    
+    
+    
+    
+    ===============
+    SEGNALAZIONI
+    ===============
+    Per quanto le segnalazioni possiamo definire lo strumento di comunicazione a disposizione dell’operatore. Esso infatti permette di segnalare le problematiche o eventi che accadono nell’allevamento al veterinario responsabile. In fase di creazione di una nuova segnalazione abbiamo a disposizione i seguenti campi:
+    
+    - Capi interessati.
+    - Descrizione problema.
+    - Allegato.
+    - Le segnalazioni saranno visualizzate al veterinario di competenza e sarà possibile filtrare per i seguenti campi:
+    - unità produttiva
+    - nome box
+    - stato
+    - range di date
 
+
+FLUSSO OPERATIVO
+===============
+
+
+
+    
+    Se la segnalazione viene risolta scompare dall’elenco delle attività e delle segnalazioni ma ne teniamo comunque traccia all’interno della scheda del capo, in modo da capire lo storico delle varie problematiche avute e risolte.
+    
