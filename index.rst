@@ -1,5 +1,13 @@
+=============
 Health Bredings Managment
+=============
 
+    Il nostro software nasce dalla volontà di sviluppare un prodotto, che permetta di controllare e gestire un allevamento in tempo reale e a distanza, in particolare monitorando la temperatura corporea dell'animale in maniera non invasiva e continua nel tempo. Lo scopo di tale sistema è ridurre il consumo degli antibiotici e al contempo di frenare il diffondersi della resistenza antimicrobica negli allevamenti.
+
+
+.. image:: https://github.com/fr00ller/Mo.Te/blob/master/dashboard.png?raw=true
+
+    
 ============
 Utenti
 ============
@@ -232,6 +240,11 @@ Allevamenti
 ===========
     Attività
 ===========
+
+
+.. image:: https://github.com/fr00ller/Mo.Te/blob/master/attivita.png?raw=true
+
+
     Sono lo strumento che viene usato dal veterinario per poter assegnare compiti ad uno specifico allevamento o unità produttiva. Nello specifico potrà essere creata una nuova attività indicando in modo generale per tutti:
 
     - **Capi interessati.**
