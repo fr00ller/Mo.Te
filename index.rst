@@ -1,6 +1,6 @@
-=============
+=========================
 Health Bredings Managment
-=============
+=========================
 
     Il nostro software nasce dalla volontà di sviluppare un prodotto, che permetta di controllare e gestire un allevamento in tempo reale e a distanza, in particolare monitorando la temperatura corporea dell'animale in maniera non invasiva e continua nel tempo. Lo scopo di tale sistema è ridurre il consumo degli antibiotici e al contempo di frenare il diffondersi della resistenza antimicrobica negli allevamenti.
 
@@ -70,29 +70,58 @@ Utenti
 Dashboard
 ============
 
-    Modulo dedicato alla visualizzazione dei dati in forma statistica e grafica. I dati saranno filtrati in base al livello di accesso dell’utente e verrà mostrata questa area solo gli utenti appartenenti al gruppo veterinario o super user.
-    Saranno presenti tutti gli allevamenti e le attività produttive e per ognuna di esse avremo i seguenti grafici:
+   Questa è la schermata principale del programma e troviamo in modo immediato lo stato di tutti i nostri allevamenti. 
 
+     .. important::  Gli allevamenti saranno filtrati in base al livello di accesso dell’utente e verrà mostrata questa area solo per gli utenti appartenenti al gruppo ''veterinario'' o ''amministratore''.
+
+   Ogni allevamento è identificato da un quadrato che riporta il nome dell'allevamento e viene colorato con un colore sempre più tendente al rosso maggiore è il numero di allarmi rilevati.
+
+
+   Per ogni quadrato possiamo avere un dettaglio dei parametri rilevati all'interno facendo click sopra di esso
+
+
+
+.. image:: https://github.com/fr00ller/Mo.Te/blob/master/dash.png?raw=true
+        
+------
 
     - **Temperature**
 
+
       Viene mostrato il valore medio delle rilevazioni di temperatura nell' allevamento.
+
 
     - **Somministrazioni**
 
+
       Viene mostrato il numero di farmaci utlizzati nel periodo di tempo selezionato
+
 
     - **Attività aperte**
 
+
       Viene mostrato in forma grafica il numero di attività aperte per il periodo selezionato.
+
 
     - **Segnalazioni Aperte**
 
+
       Viene mostrato in forma grafica il numero di attività aperte per il periodo selezionato.
+
 
     - **Mortalità capi**
 
+
       Viene mostrato il tasso di mortalità medio nell'allevamento per il periodo selezionato.
+
+-----
+
+    Per quanto riguarda i dati visualizzati saranno presi per l’intervallo di tempo selezionato nel filtro e per l’allevamento/unità produttiva selezionata.
+
+    Per ogni singolo allevamento o unità di produttiva sarà possibile lasciare dei commenti o annotazioni.
+    
+    Ogni commento viene eliminato dopo n. 3 mesi dall’inserimento.
+
 
     Con la stessa modalità descritta sopra avremo anche
 
@@ -104,9 +133,7 @@ Dashboard
 
     - Elenco temperature rilevate ordinate in modo decrescente
 
-    Per quanto riguarda i dati visualizzati saranno presi per l’intervallo di tempo selezionato nel filtro e per l’allevamento/unità produttiva selezionata.
-    Per ogni singolo allevamento o unità di produttiva sarà possibile lasciare dei commenti o annotazioni.
-    Essi vengono eliminati dopo 03 mesi dall’inserimento.
+  
 
 
 ===========
@@ -166,9 +193,9 @@ Allevamenti
 
 
 
-================
+========================
     Unità produttive
-================
+========================
 
     Anche questa maschera sarà ad uso esclusivo dell’utente amministratore  e permette di creare o modificare unità produttive. Per unità produttiva è inteso un sottoinsieme all’interno di un allevamento identificato dai seguenti campi:
 
@@ -208,11 +235,11 @@ Allevamenti
 
     I box devono essere associati ad una ed una sola unità produttiva e vengono utilizzati per individuare più velocemente dove sono collocati fisicamente i capi all’interno dell’allevamento.
 
-==================
+=======================
     Anagrafica capi
-==================
+=======================
 
-    Questa è sicuramente una delle parti centrali del programma in quanto andiamo a definire le informazioni di base di ogni singolo capo. Essa può essere inserita e modificata da tutti gli utenti in base al livello di accesso come descritto sopra. Nel dettaglio i campi previsti per ogni capo sono:
+    Le anagrafiche dei capi sono le informazioni di base di ogni singolo capo. Ogni anagrafica può essere inserita e modificata da tutti gli utenti in base al livello di accesso come descritto sopra. Nel dettaglio i campi previsti per ogni capo sono:
 
     - **Codice identificativo.**
     - **Unità produttiva.**
@@ -237,41 +264,82 @@ Allevamenti
     - Range di date.
     - Temperatura.
 
-===========
+==================
     Attività
-===========
+==================
+
+
+    Le attività sono lo strumento che viene usato dal veterinario per poter assegnare compiti ad uno specifico allevamento o unità produttiva. 
 
 
 .. image:: https://github.com/fr00ller/Mo.Te/blob/master/attivita.png?raw=true
 
 
-    Sono lo strumento che viene usato dal veterinario per poter assegnare compiti ad uno specifico allevamento o unità produttiva. Nello specifico potrà essere creata una nuova attività indicando in modo generale per tutti:
+
+-----------------------
+
+
+
+    Può essere creata una nuova attività utilizzando il bottone blu in alto a destra "+ Nuova Attività". 
+    Nella successiva maschera possiamo selezionare una specifica unità produttiva, un box o direttamente il numero del capo per poi proseguire con il testo aggiungi che ci farà comparire la seguente schermata
+
+
+
+
+.. image::  https://github.com/fr00ller/Mo.Te/blob/master/crea_attivit%C3%A0.png?raw=true
+
+
+--------
 
     - **Capi interessati.**
+
+       In base alla selezione fatta precedentemente ci troveremo i capi suddivisi per box. Possiamo comunque rimuovere ulteriori capi non interessati.
+
     - **Tipo attività (Somministrazione, Richiesta Generica).**
+
+       Va selezionata la tipologia di attività scegliendo tra:
+          
+           - Somministrazione 
+             
+             Nel caso specifico della somministrazione sarà possibile specificare:
+
+                 - **Nome del farmaco.**
+                 - **Dose.**
+                 - **Ripetizione.**
+                 - **Intervallo di tempo.**
+
+
+           - Richiesta Generica
+           
+             Nel caso specifico della richiesta generica sarà possibile specificare:
+
+                 - **Descrizione breve**
+                 - **Ripetizione.**
+                 - **Intervallo di tempo.**
+
+
+           
     - **Priorità.**
+
+       Possiamo indicare l'urgenza all'operatore indicando se ha priorità **Normale** o **Urgente**
+
     - **Descrizione.**
 
-       Nel caso specifico della somministrazione sarà possibile specificare:
+       Possiamo descrivere nel dettaglio la tipologia di attività da svolgere.
 
-    - **Nome del farmaco.**
-    - **Dose.**
-    - **Ripetizione.**
-    - **Intervallo di tempo.**
-
-    Esse saranno elencate a gli operatori interessati in base alla priorità indicata in fase di inserimento.
-    Sarà possibile filtrare le attività per rendere più agevole la ricerca all’operatore.
+    
 
     I filtri possibili per le attività sono:
 
     - Tipo di attività.
+
     - Range di date
 
 
 
-===============
+======================
     Segnalazioni
-===============
+======================
 
     Per quanto le segnalazioni possiamo definire lo strumento di comunicazione a disposizione dell’operatore. Esso infatti permette di segnalare le problematiche o eventi che accadono nell’allevamento al veterinario responsabile. In fase di creazione di una nuova segnalazione abbiamo a disposizione i seguenti campi:
 
@@ -285,12 +353,9 @@ Allevamenti
     - range di date
 
 
-===============
+=======================
 Flusso Operativo
-===============
-
-
-
+=======================
 
     Se la segnalazione viene risolta scompare dall’elenco delle attività e delle segnalazioni ma ne teniamo comunque traccia all’interno della scheda del capo, in modo da capire lo storico delle varie problematiche avute e risolte.
-
+e
